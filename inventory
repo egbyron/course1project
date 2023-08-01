@@ -1,0 +1,6 @@
+[jenkins]
+#EC2 Public IP Here
+
+[jenkins:vars]
+ansible_user=ubuntu
+ansible_ssh_private_key_file=./aws_key.pem
