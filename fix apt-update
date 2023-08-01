@@ -1,0 +1,12 @@
+For error:
+TASK [apt] *********************************************************************
+fatal: [host]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to update apt cache."}
+
+also unknown error.
+
+Solution:
+
+Login to remote machine
+Run sudo apt update
+Look for a message like Err:15 http://dl.yarnpkg.com/debian stable Release.gpg   The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 4F77679369475BAA
+Add key sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F77679369475BAA
